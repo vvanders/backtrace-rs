@@ -259,7 +259,8 @@ cfg_if! {
                         unix,
                         not(target_os = "emscripten"),
                         not(target_os = "macos"),
-                        not(target_os = "ios")))] {
+                        not(target_os = "ios"),
+                        not(target_os = "android")))] {
         mod libbacktrace;
         use self::libbacktrace::resolve as resolve_imp;
         use self::libbacktrace::Symbol as SymbolImp;
